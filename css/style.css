@@ -1,0 +1,134 @@
+:root {
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+}
+
+
+.bold {
+    font-weight: 700;
+}
+
+.light {
+    font-weight: 300;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 32px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    color: var(--dark-blue);
+    background-color: #efefef;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testamonials {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 16px 20px 29px -9px var(--grayish-blue);
+
+    background-image: url("../images/pattern-curve.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.testamonial_text_container {
+    background-image: url("../images/pattern-quotes.svg");
+    background-size: 75px 75px;
+    background-repeat: no-repeat;
+    background-position: 4.5em -33px;
+    padding-top: 1em;
+    padding-left: 2em;
+}
+
+.testamonial_text {
+    font-size: 0.6em;
+    font-weight: 300;
+}
+
+.testamonial_author {
+    font-size: 0.4em;
+    padding-top: 1em;
+}
+
+.testamonial_author_name {
+    font-weight: 700;
+}
+
+.testamonial_author_position {
+    color: var(--grayish-blue);
+}
+
+.testamonial_image {
+    background-image: url("../images/pattern-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 2em 1em 1em 1em;
+}
+
+.testamonial_image > img {
+    width: 305px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.buttons {
+    margin-top: -1em;
+    margin-left: 1em;
+}
+
+.button {
+    background-color: #fff;
+    padding: 0.1em 0.4em;
+}
+.button:first-of-type {
+    border-radius: 25px 0 0 25px;
+}
+.button:last-of-type {
+    border-radius: 0 25px 25px 0;
+}
+.button:hover {
+    background-color: var(--grayish-blue);
+}
+
+/*desktop only*/
+@media only screen and (min-width: 901px) {
+    .testamonials {
+        width: 800px;
+        height: 450px;
+    }
+
+    .testamonial {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+        padding: 0 1em;
+    }
+
+    .testamonial_text_container {
+        margin-right: -3em;
+        z-index: 1000;
+    }
+}
+
+/*mobile style*/
+@media only screen and (max-width: 900px) {
+    .testamonials {
+        max-width: 400px;
+    }
+    .testamonial {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1em;
+    }
+
+}
+
+.hidden {
+    display: none !important;
+}
